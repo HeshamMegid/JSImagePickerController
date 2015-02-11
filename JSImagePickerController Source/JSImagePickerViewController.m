@@ -39,6 +39,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @property (nonatomic, strong) UIButton *photoLibraryBtn;
 @property (nonatomic, strong) UIButton *cameraBtn;
 @property (nonatomic, strong) UIButton *cancelBtn;
+@property (nonatomic, assign) UIStatusBarStyle initialStatusBarStyle;
 
 
 @property (nonatomic, strong) NSMutableArray *assets;
@@ -55,6 +56,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if (self) {
         self.assets = [[NSMutableArray alloc] init];
         [self setupView];
+        self.initialStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
     }
     return self;
 }
@@ -151,6 +153,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     [self.imagePickerView addSubview:self.photoLibraryBtn];
     [self.imagePickerView addSubview:self.cameraBtn];
     [self.imagePickerView addSubview:self.cancelBtn];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [[UIApplication sharedApplication] setStatusBarStyle:self.initialStatusBarStyle];
 }
 
 #pragma mark - Collection view
