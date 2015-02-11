@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "JSImagePickerController"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A photo picker controller that resembles the style of the image picker in iOS 8's messages app."
   s.description      = <<-DESC
                        A photo picker controller that resembles the style of the image picker in iOS 8's messages app.
