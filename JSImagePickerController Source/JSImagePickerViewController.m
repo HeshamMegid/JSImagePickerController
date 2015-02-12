@@ -119,17 +119,17 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     UIFont *btnFont = [UIFont systemFontOfSize:19.0];
     
     self.photoLibraryBtn = [[UIButton alloc] initWithFrame:libraryBtnFrame];
-    [self.photoLibraryBtn setTitle:@"Photo Library" forState:UIControlStateNormal];
+    [self.photoLibraryBtn setTitle:@"مكتبة الصور" forState:UIControlStateNormal];
     self.photoLibraryBtn.titleLabel.font = btnFont;
     [self.photoLibraryBtn addTarget:self action:@selector(selectFromLibraryWasPressed) forControlEvents:UIControlEventTouchUpInside];
     
     self.cameraBtn = [[UIButton alloc] initWithFrame:cameraBtnFrame];
-    [self.cameraBtn setTitle:@"Take Photo" forState:UIControlStateNormal];
+    [self.cameraBtn setTitle:@"أخذ صورة" forState:UIControlStateNormal];
     self.cameraBtn.titleLabel.font = btnFont;
     [self.cameraBtn addTarget:self action:@selector(takePhotoWasPressed) forControlEvents:UIControlEventTouchUpInside];
     
     self.cancelBtn = [[UIButton alloc] initWithFrame:cancelBtnFrame];
-    [self.cancelBtn setTitle:@"Cancel" forState:UIControlStateNormal];
+    [self.cancelBtn setTitle:@"إلغاء" forState:UIControlStateNormal];
     self.cancelBtn.titleLabel.font = btnFont;
     [self.cancelBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     
